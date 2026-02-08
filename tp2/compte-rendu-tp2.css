@@ -1,0 +1,31 @@
+
+
+th {
+    padding: 10px;
+    border: 2px solid #1c87c9;
+    border-radius: 5px;
+    background-color: #e5e5e5;
+    text-align: center;
+    }
+
+    h1,h2,h3{
+
+        text-align:center  ;
+
+    }
+
+p:hover{
+    color: #1C780C;
+}
+
+p:nth-child{
+     color:rgb(80%, 80%, 90%) ;
+
+}
+td{
+        padding: 2%;
+
+}
+table{
+    width: 100%; 
+}
