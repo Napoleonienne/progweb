@@ -1,6 +1,33 @@
 
 
-
 body{
-    color: black;
+background: linear-gradient(to left, #000000aa, #2f0061);
+color: rgb(224, 248, 248);
+font-family: Sans-Serif;
+
+}
+
+
+ table, th, td {
+  border: 1px solid;
+}
+
+
+p.right{
+  text-align: right;
+}
+h1{
+    font-size: 24pt;
+    text-align: center;
+
+  position: relative;
+}
+h2{
+  font-size: 18pt;
+  color: blue;
+}
+
+h3{
+  font-size: 16pt;
+
 }
