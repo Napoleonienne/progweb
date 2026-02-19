@@ -10,12 +10,48 @@
 </head>
 <body>
     
-<h1>tp3</h1>
+<h1>tp3:</h1>
 
 
 <section>
 
-<h2></h2>
+<h2>Exercice 1 : Hello World</h2>
+<ol>
+
+    <li><h3>  Recopiez la page Web exo1.html dans votre répertoire tp3.
+Que se passe-t-il lorsque l'on visualise la page ?
+Comment fait-on pour ouvrir la console avec Firefox ?
+Et avec Chrome ? </h3>
+
+il se passe rien dans la page mais dans la console y a hello
+ctrl+shift+k pour firefox
+ctrl+shift+j pour chrome
+    </li>
+
+        <li><h3>  Mettez l'ancien code en commentaire.
+Ecrivez un code permettant d'afficher, toujours dans la console, les nombres de 0 à 2025 inclus (il n'est pas nécessaire de faire une fonction pour l'instant).
+Note : par pitié, pas de copier/coller, d'autant plus que l'on doit afficher 2026 nombres ! . </h3>
+
+j'utilise une  boucle
+</li>
+
+
+<li>
+    <h3>Mettez l'ancien code en commentaire.
+Réécrivez un nouveau code code pour afficher dans la console les nombres divisibles par 2 ou par 3 allant de 0 à 2025 inclus : 0, 2, 3, 4, 6, 8, …, 2020, 2022, 2024, 2025.</h3>
+
+j'utilise une  boucle
+j'utilise le modulo pour savoir si le nombre est divisible par 2 ou 3
+
+</li>
+
+
+<li>
+    <h3>Commentez l'ancien code et écrire une fonction (que vous nommerez de façon claire et intelligente) prenant un entier en paramètre et affichant sur la console les nombres divisibles par 2 ou par 3 allant de de 0 à cet entier (inclus). Puis écrivez un code de test de la fonction avec les valeurs 7 et puis 10. Que se passe-t-il si on teste la fonction avec la valeur -1 ? </h3>
+
+    une boucle for pour parcourir les nombre de 0 a n
+    utilisation du modulo pour savoir si le nombre est divisible par 2 ou 3
+</li>
 
 
 
@@ -23,23 +59,23 @@
 
 <section>
 
-<h2>ex2</h2>
+<h2>Exercice 2 : Manipulations simples</h2>
 
 
 <ol>
 
-    <li><h2>   </h2>
+    <li><h3>   </h3>
     </li>
 
-        <li><h2>  Décommenter la ligne où l'on appelle la fonction question2.
-Que s'affiche-t-il dans la console ? Expliquer chacun des résultats des huits tests que l'on a effectués.  </h2>
+        <li><h3>  Décommenter la ligne où l'on appelle la fonction question2.
+Que s'affiche-t-il dans la console ? Expliquer chacun des résultats des huits tests que l'on a effectués.  </h3>
 
             sa affiche une serie de test sur  les combinaison de true avec et ou  
             et verbose affiche la vaeur 
             si le dernier
     </li>
 
-        <li><h2>   </h2>
+        <li><h3>2.   </h3>
 
             test 1 envoie 3+3=6
             test 2 renvoi convertir en string puis double ecris deux fois trois
@@ -53,7 +89,62 @@ Que s'affiche-t-il dans la console ? Expliquer chacun des résultats des huits t
 
 <section>
 
-<h2></h2>
+<h2>Exercice 3 : Nombres premiers et PGCD</h2>
+ <h3>
+Recopiez la page Web exo3.html dans votre répertoire tp3. 
+</h3>
+ <p>
+    oui
+ </p>
+
+
+  <h3>
+Quel message d'avertissement pouvez-vous lire quand vous ouvrez la console ? Et que voyez-vous quand vous ouvrez l'onglet « Réseau » de la console de développement Web ?
+Lire attentivement le code source du fichier exo3.html et téléchargez dans votre répertoire tp3 la ressource qu'il vous manque pour faire fonctionner correctement la page exo3.html. 
+</h3>
+ <p>    
+    Loading failed for the script with source “file:///run/user/1000/doc/25ac729a/graph.js”. exo3:41:49
+
+    bon bah il faut télécharger le fichier graph.js et le mettre dans le repertoire tp3 ou juste le link
+ </p>
+
+
+  <h3>En haut de la page Web se trouve une section intitulée Somme. Vous pouvez y écrire deux entiers, dans deux zones balisées de type textarea.
+Que se passe-t-il quand vous appuyez sur le bouton C'est parti ! situé juste en-dessous ?
+Quelle ressource devez-vous charger pour que tout s'affiche bien ? </h3>
+ <p> 1 il s'affiche rien           
+    rien?
+
+</p>
+
+      <h3> Dans cette première section, on calculait la somme de deux entiers, à l'aide d'une fonction nommée sum. Dans la deuxième section, on souhaite calculer le PGCD de deux entiers.
+Pour ce faire, remplir le corps de la fonction pgcd de sorte que pgcd(a,b) renvoie le PGCD des entiers a et b.
+On rappelle que le PGCD peut se calculer à l'aide de l'algorithme d'Euclide.
+Tester votre fonction en écrivant des entiers dans les deux zones balisées de type textarea</h3>
+      <p>
+        juste utilider algo euclide et sa marche
+      </p>
+      
+         <h3>On souhaite maintenant vérifier si un nombre est premier. On rappelle qu'un entier n est premier lorsque n possède exactement deux diviseurs strictement positifs.
+Remplir le corps de la fonction isPrime de sorte que isPrime(n) renvoie true si n est un nombre premier, et false sinon.
+Tester votre fonction en écrivant un entier dans la zone balisée de type textarea.</h3>
+         <p>
+            pour savoir si un nombre est premier il faut verifier que il n'est pas divisible par un nombre entre 2 et sa racine carré j'ai vut sa sur wikipedia
+         </p>
+        <h3>     On souhaite enfin afficher la liste des premiers nombres premiers. Remplir le corps de la fonction listPrimes de sorte que listPrimes(n) renvoie une chaîne de caractères contenant les écritures décimales des nombres premiers compris entre 2 et n inclus, séparées par des virgules.
+    Par exemple, listPrimes(9) renvoie la chaîne de caractères "2,3,5,7".
+    Tester votre fonction en écrivant un entier dans la zone balisée de type textarea.</h3>
+        <p>
+            utiilise uintarray pour faire un tableau de 0 et de  1   pour economiser de la place et faire le crible d'erathostene pour trouver les nombre premier
+            
+
+
+        </p>
+
+
+
+
+
 
 
 

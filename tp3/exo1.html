@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="/stylesheet.css">
  <head>
   <meta charset="utf-8">
   <title>Mon tout premier script</title>
   <script>
    "use strict";
    /**
-   for(let i = 0 ; i<2025; i ++) {
+    function compte2025(){} 
+   for(let i = 0 ; i<=2025; i ++) {
     console.log(i);
-}
+  }
+    }
     **/
    /**
       for(let i = 0 ; i<2026; i ++) {
@@ -22,8 +24,7 @@
             if (i%2 ==0 || i%3 ==0)
             
                 console.log(i,": ",true);
-
-            console.log(i,": ",false);
+            else console.log(i,": ",false);
     }
 
     console.log("pair ou divisble par 3:\n  ",

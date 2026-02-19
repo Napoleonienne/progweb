@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Le lièvre et la tortue</title>
+  <script>
+   "use strict";
+    var torture =0
+    var lapin
+
+
+    function uniform(n){
+
+        let res =0;
+        seed =Date.now()
+        let r = seed%n+1
+
+        return r;
+    }
+    function lancer(){
+        let n =uniform(20)
+        if (n<15 )
+            torture += n;
+        else
+            lapin += n;
+
+
+    }
+
+
+
+  </script>
+ </head>
+ <body>
+  <h2>Le lièvre et la tortue</h2>
+ </body>
+</html>
