@@ -5,27 +5,47 @@
   <title>Le lièvre et la tortue</title>
   <script>
    "use strict";
-    var torture =0
-    var lapin
+    var torture =0;
+    var lapin =0;
 
 
     function uniform(n){
 
         let res =0;
-        seed =Date.now()
-        let r = seed%n+1
+        var seed =Date.now();
+        let r = seed%n+1;
 
         return r;
     }
-    function lancer(){
+    function etape(torture,lapin){
         let n =uniform(20)
         if (n<15 )
             torture += n;
         else
             lapin += n;
-
+        return torture,lapin;
 
     }
+
+    function course(n){
+        let lapin =0;
+        let tortue =0;
+        let tabeau =  []
+        tabeau = ["lapin","torture"]
+
+        for(let i=0; i<n; i++){
+            tortue,lapin = etape(tortue,lapin);
+            tabeau.push( (lapin,tortue) );
+
+
+        };
+        return tabeau
+
+    }
+
+    console.log((course(5000)))
+
+
 
 
 

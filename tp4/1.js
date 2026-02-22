@@ -1,49 +1,46 @@
-const triangleRectangle = function(n) {
-    for(let i =0 ; i<n; i++ ) {
-        for(let j =0;j<=i;j++){
-        print("*")
+var torture =0;
+    var lapin =0;
 
-        }
+    const crypto = require('crypto');
+    function uniform(n){
+
+        var seed =Date.now();
+        var c = ["SHA-256","SHA-384","SHA-512"]
+        
+
+
+
+
+        
+        let r = seed%n+1;
+
+        return r;
     }
-    // Écrire le corps de la fonction ici.
-};
-// Écrire les tests ici.
-triangleRectangle(5)
-/* Question 2 */
-const triangleIsocèle = function(n) {
-    for(let i =0 ; i<n; i++ ) {
-    for(let j =0;j<=i;j++){
-        print("*")
+    function etape( torture,lapin){
+        let n =uniform(20)
+        if (n<15 )
+            torture += n;
+        else
+            lapin += n;
+        console.log(n);
+        return [torture,lapin];
 
     }
+
+    function course(n){
+        let d = [0,0];
+      
+        let tabeau =  []
+        tabeau = ["tortue","lapin"]
+
+        for(let i=0; i<n; i++){
+            d = etape(d.at(0),d.at(1));
+            tabeau.push( d );
+
+
+        };
+        return tabeau
+
     }
 
-};
-// Écrire les tests ici.
-
-/* Question 3 */
-const rectangle = function(a,b) {
-    for(let i =0 ; i<a; i++ ) {
-    for(let j =0;j<=b;j++){
-        print("*")
-
-    }}
-
-
-    // Écrire le corps de la fonction ici.
-};
-// Écrire les tests ici.
-rectangle(10,5)
-/* Question 4 */
-const carré = function(n) {
-    // Écrire le corps de la fonction ici.
-};
-// Écrire les tests ici.
-
-/* Question 6 */
-noMoreConsole(); // Ne **surtout** pas effacer cette ligne
-const rectangle2 = function(a,b) {
-
-
-
-};
+    console.log((course(10)))
