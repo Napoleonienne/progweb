@@ -30,15 +30,18 @@
     function course(n){
         let lapin =0;
         let tortue =0;
-        let tabeau =  []
-        tabeau = ["lapin","torture"]
+        let tabeau =  [0,0]
+        tabeau[0] = ["lapin","torture"]
+        tabeau[1] = [0,0]
 
         for(let i=0; i<n; i++){
-            tortue,lapin = etape(tortue,lapin);
-            tabeau.push( (lapin,tortue) );
+            temp = etape(tortue,lapin);
+            tabeau[1][0] += temp[1]
+            tabeau[1][1] += temp[0]
 
 
         };
+        
         return tabeau
 
     }
