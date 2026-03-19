@@ -19,17 +19,85 @@
 <main>
     <article class="exercise-card">
         <header class="exercise-header">
-            <h2>01. Fondations Lexicales</h2>
+            <h2>Exercice 1 : Memory</h2>
         </header>
         
         <div class="content">
             <section class="question">
-                <h3>Quelle est l'essence des balises h1 à h3 ?</h3>
-                <p>Elles ne sont pas de simples outils de taille, mais les vertèbres de votre pensée, structurant le chaos en une hiérarchie intelligible.</p>
+                <h3>Écrivez le code de la fonction create pour stocker le tableau des sources des images et l'image de dos de carte.
+                Écrivez ensuite le code de la méthode build afin que le nombre d'images soit affiché à l'intérieur de la balise div prise en paramètre.
+                Note : les élements du DOM possèdent un attribut innerHTML. </h3>
+                <p>
+
+                </p>
             </section>
 
             <section class="question">
-                <h3>L'insertion d'une vision (img)</h3>
+                <h3>
+                    Pour notre jeu de memory, nous allons créer des paires de cartes, une paire par image. Pour stocker ces cartes, on va créer un tableau cards qui va contenir pour chaque carte l'index de l'image correspondante.
+Dans un vrai memory, ce tableau des index des images est permuté lors de la création du jeu ; sinon, ce n'est pas très drole. Pour l'instant, nous allons utiliser la fonction shuffleCards qui vous a été donnée car cela sera plus facile pour la mise au point du programme.
+Que fait la fonction shuffleCards, et en quoi cela aide-t-il pour la mise au point du programme ? 
+                </h3>
+                <p>
+                    shuffle card de ce que je vois ajoute juste 2 fois les indice de suite donc je vosi pas utilité
+
+                </p>
+            </section>
+
+
+            <section class="question">
+                <h3>
+                    Modifiez la fonction create pour que game contienne également un tableau positions fourni par la fonction shuffleCards. Modifiez ensuite la méthode build pour afficher autant de cartes que de cases du tableau cards qu'a renvoyé la fonction shuffleCards (ici, 16 cartes). Chaque carte sera représentée par un div contenant une image (voir le CSS de memory.html). Pour l'instant, chaque carte affichera le même dos d'image.
+Rappel : l'élement DOM correspondant à une image possède une propriété src. 
+</h3>
+                <p>
+
+                </p>
+            </section>
+
+            <section class="question">
+                <h3> 
+On souhaite ajouter une fonction permettant de savoir lorsque l'utilisateur a cliqué sur une carte.
+Note : tout élément est être muni d'une fonction onclick qui permet d'exécuter une fonction quand on clique sur la zone correspondant à cette balise. Le code JavaScript à utiliser pour munir un élément elt d'une fonction fun() ou bien fun(event) qui sera déclenchée lors d'un clic sera alors 
+</h3>
+                <p>La balise <code>&lt;img&gt;</code> est une fenêtre ouverte sur l'imaginaire, ancrée par l'attribut <code>alt</code> pour ceux qui lisent avec le cœur (ou un lecteur d'écran).</p>
+            </section>
+
+            <section class="question">
+                <h3>
+    On souhaite maintenant pouvoir afficher l'image correspondant à une carte lorsque l'on clique sur la carte.
+Comment faire pour que le tableau des sources des images soit accessible lors d'un clic ? Et pour que les images effectivement affichées changent de source si nécessaire ?
+Implantez votre solution pour que, lorsque l'on clique sur une carte, l'image correspondante s'affiche. </h3>
+                <p>La balise <code>&lt;img&gt;</code> est une fenêtre ouverte sur l'imaginaire, ancrée par l'attribut <code>alt</code> pour ceux qui lisent avec le cœur (ou un lecteur d'écran).</p>
+            </section>
+
+                        <section class="question">
+                <h3>
+                    Il faut maintenant implanter la mécanique du jeu.
+Comme on découvre les cartes, une par une, il faut se souvenir de la carte précédente (si elle existe) pour savoir si le jeu est dans l'un des états suivants :
+
+    on doit découvrir 2 cartes ;
+    on doit découvrir 1 carte (l'autre est déjà connue) ;
+    deux cartes ont été découvertes.
+
+                </h3>
+                <p>La balise <code>&lt;img&gt;</code> est une fenêtre ouverte sur l'imaginaire, ancrée par l'attribut <code>alt</code> pour ceux qui lisent avec le cœur (ou un lecteur d'écran).</p>
+            </section>
+
+
+                        <section class="question">
+                <h3>
+Si les images des deux cartes ne sont pas identiques, on souhaite avoir le temps de voir la face de la seconde carte avant de les retourner face cachée. Pour cela, le plus simple est d'attendre 500 ms avant de retourner les cartes. Comment écrire cela en JavaScript ?
+Note : attention à ce que vous appelez this ! 
+                </h3>
+                <p>La balise <code>&lt;img&gt;</code> est une fenêtre ouverte sur l'imaginaire, ancrée par l'attribut <code>alt</code> pour ceux qui lisent avec le cœur (ou un lecteur d'écran).</p>
+            </section>
+
+
+                        <section class="question">
+                <h3>
+                    Enfin, modifiez shuffleCards pour que le tableau des cartes soit mélangé de façon aléatoire (comme dans la question 1 de l'exercice 3 du TP4). 
+                </h3>
                 <p>La balise <code>&lt;img&gt;</code> est une fenêtre ouverte sur l'imaginaire, ancrée par l'attribut <code>alt</code> pour ceux qui lisent avec le cœur (ou un lecteur d'écran).</p>
             </section>
         </div>
