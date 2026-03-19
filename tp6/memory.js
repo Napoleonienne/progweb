@@ -29,6 +29,8 @@ class carte {
 
     }
   }
+
+  
   changement_etat(){
     this.visible = !this.visible;
   }
