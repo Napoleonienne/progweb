@@ -8,7 +8,40 @@ game.create = function(images, blank) {
 };
 
 
+class carte {
+  constructor(dos_carte,carte){
+    this.dos_carte = dos_carte;
+    this.visible = false;
+    this.img = document.createElement('img');
+    this.afficher()
+    img.setAttribute('alt', "carte");
+    img.width = '80';
+    img.height = '80';
+    this.carte = carte;
+  }
 
+  afficher(){
+    if(this.visible){
+      img.setAttribute('src', this.carte);
+
+    }else{
+      img.setAttribute('src', this.dos_carte);
+
+    }
+  }
+  changement_etat(){
+    this.visible = !this.visible;
+  }
+  set_function(fun){
+    this.img.onclick = fun;
+
+  }
+  
+
+
+
+
+}
 
 
 game.build = function(div) {
