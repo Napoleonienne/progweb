@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+
+
+:root {
+    --accent-color: #f39c12; 
+    --text-main: #2c3e50;
+    --bg-soft: #f9f9f9;
+    --spacing: 2rem;
+}
+
+
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+
+
+    margin: 0;
+    padding: var(--spacing);
+    background: #2a0657;
+
+
+    border: 8px solid black;
+    min-height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-family: "Fascinate Inline", system-ui;
+    font-style: normal;
+}
+
+
+
+table, th, td {
+  border: 1px solid;
+}
+#paire{
+
+  font-size: 16px;
+  color: gold;
+}
+
+p.right{
+  text-align: right;
+}
+h1{
+    font-size: 24pt;
+    text-align: center;
+
+  position: relative;
+}
+h2{
+  font-size: 18pt;
+  color: rgb(188, 188, 220);
+}
+
+h3{
+  font-size: 16pt;
+
+}

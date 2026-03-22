@@ -1,13 +1,17 @@
 const game = {};
 game.create = function(images, blank) {
   this.images = images;
-  this.blank = blank;
+  this.dos_carte = blank;
 
   this.cards = shuffleCards(this.images.length);
+  this.carte_reveler=[]
+  this.compteur =
+
 
 
   //version 2
   this.tb_carte =[].fill(0,0,7);
+
 
   
 };
@@ -16,66 +20,77 @@ var carte_reveler = []
 
 
 class carte {
-  constructor(dos_carte,carte){
+  constructor(dos_carte, carte) {
     this.dos_carte = dos_carte;
+    this.carte = carte;
     this.visible = false;
+    
     this.img = document.createElement('img');
     this.img.setAttribute('src', this.dos_carte);
-
-    this.img.setAttribute('alt', dos);
-    this.img.width = '80';
-    this.img.height = '80';
-    this.carte = carte;
-    this.img.onclick = this.click;
-
+    this.img.setAttribute('alt', 'dos de la carte');
+    this.img.width = 80; 
+    this.img.height = 80;
+    
+    this.img.onclick = this.click.bind(this);
   }
 
-  afficher(){
-    if(this.visible){
-      img.setAttribute('src', this.carte);
+  afficher() {
+    if (!this.visible) {
+      this.img.setAttribute('src', this.carte);
       this.changement_etat();
     }
   }
 
-  cacher(){
-    if(this.visible){
-      img.setAttribute('src', this.dos_carte);
+  cacher() {
+    if (this.visible) {
+      this.img.setAttribute('src', this.dos_carte);
       this.changement_etat();
-
+    }
   }
-}
   
-  changement_etat(){
-
+  changement_etat() {
     this.visible = !this.visible;
   }
-click(){
-  if(!this.visible ){
-    this.afficher();
+
+  click() {
+    if (!this.visible) {
+      this.afficher();
     }
+  }
 }
 
+game.build2 = function(div) {
 
-}
-game.build2 = function(div){
-    div.innerHTML = `${this.images.length}    <br>`;
-    let bl = this.blank;
-   for (let index_16 = 0; index_16 < this.cards.length; index_16++) {
-      let index_8=this.cards[index_16] ;
-      let ji = this.images[index_8];
-      this.tb_carte[index_16] = new carte(bl,ji);
-      let div_img =document.createElement("div")
-      div_img.className = "carte"
+  let div_p = document.createElement("p");
+  div_p.id ="paire";
+  div_p.innerText =` paire restanste : ${this.images.length}`
 
-      div.appendChild(div_img);
-      div_img.appendChild(this.tb_carte[index_8]);
-      
-      
-    }
+  div.appendChild(div_p);
+  
+
+  
+  let bl = this.dos_carte;
+  
+  this.tb_carte = []; 
+
+  for (let index_16 = 0; index_16 < this.cards.length; index_16++) {
+    let index_8 = this.cards[index_16];
+    let ji = this.images[index_8];
+    
+    let nouvelle_carte = new carte(bl, ji);
+    
+    this.tb_carte[index_16] = nouvelle_carte;
+    
+    let div_img = document.createElement("div");
+    div_img.className
+    div_img.className = "carte";
 
 
-}
-
+    div.appendChild(div_img);
+    
+    div_img.appendChild(nouvelle_carte.img);
+  }
+};
 
 game.logic2= function(){
   this.tb_carte;
@@ -90,8 +105,11 @@ game.logic2= function(){
 game.build = function(div) {
 
   
-    div.innerHTML = `${this.images.length}    <br>`;
-    let bl = this.blank;
+      let div_p = document.createElement("p");
+      div_p.id ="paire";
+      div_p.innerText =` paire restanste : ${this.compteur}`
+
+      div.appendChild(div_p);
 
     for (let index_16 = 0; index_16 < this.cards.length; index_16++) {
       let index_8=this.cards[index_16] ;
@@ -99,7 +117,7 @@ game.build = function(div) {
       let div_img =document.createElement("div")
       div_img.className = "carte"
           const img = document.createElement('img');
-          img.setAttribute('src', this.blank);
+          img.setAttribute('src', this.dos_carte);
           img.setAttribute('alt', "carte");
           img.width = '80';
           img.height = '80';
@@ -112,28 +130,22 @@ game.build = function(div) {
 
             let i = index_8;
             let j = index_16;
-            let dos_carte =bl;
-            let carte = ji;
             let img2 = img;
-            v = img2.getAttribute("src");
-            if(v == dos_carte ){
-              img2.setAttribute('src',carte);
-            }
-            else{
-              img2.setAttribute("src",dos_carte)
-              
+            img2.setAttribute('src',this.images[i]);
+            
+            this.carte_reveler.push(i);
 
-            }
-            carte.carte_reveler
+
+            
+
 
             console.info(i,j);
-            console.timeEnd();
 
             
             return 0;
           }
      
-          img.onclick = click;
+          img.onclick = click.bind(this);
 
 
 
@@ -144,24 +156,23 @@ game.build = function(div) {
 };
 
 game.logic = function(div){
-  document.createElement('img').animate;
-  let precedent = null
+        
+        if(this.carte_reveler.length ==2 ){
+            if(this.carte_reveler[0] == this.carte_reveler[1]){
+              let beta = div.children;
+              this.compteur -= 1;
+              div.querySelector("paires").innerText= ` paire restanste : ${this.compteur}`;
+            for (let i = 0; i < beta.length; i++) {
+              console.log(beta[i].textContent);
 
-  d = div.children;
-  for (let index = 0; index < d.length; index++) {
-    const element = d[index];
-    temp =d.getAttribute("src");
-    if(precedent == null){
-      
-    }
-    
-    
-  }
+            }}
+            else{
 
-  
+            }
 
 
-
+        }
+        
 
 
 
