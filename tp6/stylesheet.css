@@ -48,6 +48,7 @@ p.right{
 h1{
     font-size: 24pt;
     text-align: center;
+    color: var(--accent-color);
 
   position: relative;
 }
@@ -59,4 +60,46 @@ h2{
 h3{
   font-size: 16pt;
 
+}
+
+.carte_retourner {
+  background-color: transparent;
+
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+/* This container is needed to position the front and back side */
+.carte{
+  position: relative;
+
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.carte_retourner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.carte_dessus, .carte_arriere {
+  position: absolute;
+
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.carte_dessus{
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.carte_arriere {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
 }

@@ -44,7 +44,8 @@ Dans un vrai memory, ce tableau des index des images est permuté lors de la cr�
 Que fait la fonction shuffleCards, et en quoi cela aide-t-il pour la mise au point du programme ? 
                 </h3>
                 <p>
-                    shuffle card de ce que je vois ajoute juste 2 fois les indice de suite donc je vosi pas utilité
+                    a melanger les carte 
+                    ce que je fais je pioche un nombre random entre 0 et i qui la position dans la liste et j'echange
 
                 </p>
             </section>
@@ -58,6 +59,9 @@ Rappel : l'élement DOM correspondant à une image possède une propriété src.
 </h3>
                 <p>
 
+                    je passe juste la liste dans la fonction et dans build j'ai juste creer une image avec le dos de lacarte et j'associe une fonction
+                    qui contien image de la retourner
+
                 </p>
             </section>
 
@@ -66,7 +70,9 @@ Rappel : l'élement DOM correspondant à une image possède une propriété src.
 On souhaite ajouter une fonction permettant de savoir lorsque l'utilisateur a cliqué sur une carte.
 Note : tout élément est être muni d'une fonction onclick qui permet d'exécuter une fonction quand on clique sur la zone correspondant à cette balise. Le code JavaScript à utiliser pour munir un élément elt d'une fonction fun() ou bien fun(event) qui sera déclenchée lors d'un clic sera alors 
 </h3>
-                <p>La balise <code>&lt;img&gt;</code> est une fenêtre ouverte sur l'imaginaire, ancrée par l'attribut <code>alt</code> pour ceux qui lisent avec le cœur (ou un lecteur d'écran).</p>
+                <p>
+                    j'ai ajouter la fonction qui stocke l'indice et quand on clique dessus retourne la liste et met les indice dans une liste de game
+                </p>
             </section>
 
             <section class="question">
@@ -87,7 +93,14 @@ Comme on découvre les cartes, une par une, il faut se souvenir de la carte pré
     deux cartes ont été découvertes.
 
                 </h3>
-                <p>La balise <code>&lt;img&gt;</code> est une fenêtre ouverte sur l'imaginaire, ancrée par l'attribut <code>alt</code> pour ceux qui lisent avec le cœur (ou un lecteur d'écran).</p>
+                <p>
+                    <code>
+                        carte reveler =[]
+                        if(carte_reveler == 2)
+                            carte_reveler[0] == carte[1]
+
+                    </code>
+                </p>
             </section>
 
 
