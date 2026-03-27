@@ -14,10 +14,13 @@ body {
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.6;
 
-
+    background: linear-gradient(
+    to bottom right,
+    #fc00ff,
+    #00dbde
+  );
     margin: 0;
     padding: var(--spacing);
-    background: #2a0657;
 
 
     border: 8px solid black;
@@ -62,44 +65,57 @@ h3{
 
 }
 
-.carte_retourner {
-  background-color: transparent;
 
-  border: 1px solid #f1f1f1;
+
+
+
+
+
+
+
+
+
+.cardFlip {
   perspective: 1000px;
 }
 
-/* This container is needed to position the front and back side */
-.carte{
-  position: relative;
+.cardFlip-content {
 
-  text-align: center;
-  transition: transform 0.8s;
+  transition: transform 1s;
+  
   transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.carte_retourner {
+.cardFlip-content.is-flipped {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
-.carte_dessus, .carte_arriere {
+.cardFlip-inside {
   position: absolute;
 
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  overflow: hidden;
+
 }
 
-/* Style the front side (fallback if image is missing) */
-.carte_dessus{
-  background-color: #bbb;
-  color: black;
+.cardFlip-inside--front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Style the back side */
-.carte_arriere {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
+
+
+.cardFlip-inside--back {
+ transform: rotateY(180deg);
+}
+
+.cardFlip-back-content {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

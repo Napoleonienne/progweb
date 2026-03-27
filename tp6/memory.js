@@ -22,42 +22,50 @@ game.build = function(div) {
       div_p.innerText =` paire restanste : ${this.compteur}`
 
       div.appendChild(div_p);
-
-    for (let index_16 = 0; index_16 < this.cards.length; index_16++) {
-      let index_8=this.cards[index_16] ;
-      let ji = this.images[index_8];
-      let div_img =document.createElement("div");
-      let div_fr =document.createElement("div");
-      let div_bc =document.createElement("div");
-
-
       
 
-      div_img.className = "carteinner";
+    for (let index_16 in  this.cards) {
+      let index_8=index_16;
+      let ji = this.images[index_8];
+      let div_img = document.createElement("div");
+      div_img.classList.add("cardFlip-content");
+      let div_fr  = document.createElement("div");
+      let div_bc  = document.createElement("div");
 
 
-          const img = document.createElement('img');
-          img.setAttribute('src', this.dos_carte);
-          img.setAttribute('alt', "carte");
-          div_fr.classList.add("carte_dessus");
-          div_fr.appendChild(img)
+      const img = document.createElement('img');
+      img.setAttribute('src', this.dos_carte);
+      img.setAttribute('alt', "carte");
+      div_fr.classList.add("cardFlip-inside");
+      div_fr.classList.add("cardFlip-inside--front")
+      div_fr.appendChild(img)
 
+      const img2 = document.createElement("img");
+      img2.setAttribute("src",this.images[index_8])
+      img2.setAttribute("alt","carte");
+      div_bc.classList.add("cardFlip-inside");
+      div_bc.classList.add("cardFlip-inside--back")
 
-          const img2 = document.createElement("img");
-          img2.setAttribute("src",this.images[index_8])
-          img2.setAttribute("alt","carte");
-          div_bc.classList.add("carte_arriere");
-          div_bc.appendChild(img2)
-           div_img.appendChild(div_bc)
-          div_img.appendChild(div_fr);
-            div.appendChild(div_img);
+      div_bc.appendChild(img2)
+
+      div_img.appendChild(div_fr)
+      div_img.appendChild(div_bc);
+      div.appendChild(div_img);
 
 
 
           
           function click(){
+            let indice = [index_16,index_8]
             let div_img1 = div_img;
-            div_img1.classList.add("carte_retourner") 
+            div_img1.classList.add("is-flipped")
+
+            if(this.carte_reveler.length < 2 && div_img1.id !="reveler"){
+            this.carte_reveler.push(indice);
+
+            this.logic(div);
+            
+            }
             /*
             if(this.carte_reveler.length < 2 && div_img1.id !="reveler"){
 
@@ -111,14 +119,7 @@ game.logic = function(div){
               enfant[this.carte_reveler[0][0]+1].id ="reveler";
               enfant[this.carte_reveler[1][0]+1].id ="reveler";
 
-             
-              
-
-
-
-      
-
-          this.carte_reveler = [];
+          
           }
           for (let index =1; index<17;index++) {
             let div_img = enfant[index];
@@ -127,26 +128,22 @@ game.logic = function(div){
               
                 if( div_img.id !="reveler" ){
                 window.setTimeout(function(){                 
-                img.setAttribute("src",this.dos_carte);}.bind(this)
-                  ,500);
+                div_img.classList.remove("is-flipped");
+              }.bind(this)
+                  ,1500);
                 
                 
               }}
-              this.carte_reveler = [];
+              window.setTimeout(function(){this.carte_reveler = [];}.bind(this),1500)
 
         if (this.compteur == 0) {
             
            if (window.confirm("vous avez gagner veuillez recharger la page")){
-             window.confirm("sometext");
-           };
-            
-
-         
-
-          
+            location.reload();
+           
+           };  
           
         }
-
 
         }
 
