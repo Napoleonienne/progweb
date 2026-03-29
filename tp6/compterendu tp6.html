@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manipulation du DOM, objet JavaScript]</title>
-    <link rel="stylesheet" href="sty.css">
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
 
@@ -32,8 +32,6 @@
                     pour build div.innerhtlm ="8 "
 
 
-
-
                 </p>
             </section>
 
@@ -45,7 +43,6 @@ Que fait la fonction shuffleCards, et en quoi cela aide-t-il pour la mise au poi
                 </h3>
                 <p>
                     a melanger les carte 
-                    ce que je fais je pioche un nombre random entre 0 et i qui la position dans la liste et j'echange
 
                 </p>
             </section>
@@ -58,9 +55,8 @@ Que fait la fonction shuffleCards, et en quoi cela aide-t-il pour la mise au poi
 Rappel : l'élement DOM correspondant à une image possède une propriété src. 
 </h3>
                 <p>
-
-                    je passe juste la liste dans la fonction et dans build j'ai juste creer une image avec le dos de lacarte et j'associe une fonction
-                    qui contien image de la retourner
+                    creer juste 2 variable 
+                    cards j'utilise la fonction shuffle directement avec card pour crrer la liste d'indice
 
                 </p>
             </section>
@@ -71,7 +67,8 @@ On souhaite ajouter une fonction permettant de savoir lorsque l'utilisateur a cl
 Note : tout élément est être muni d'une fonction onclick qui permet d'exécuter une fonction quand on clique sur la zone correspondant à cette balise. Le code JavaScript à utiliser pour munir un élément elt d'une fonction fun() ou bien fun(event) qui sera déclenchée lors d'un clic sera alors 
 </h3>
                 <p>
-                    j'ai ajouter la fonction qui stocke l'indice et quand on clique dessus retourne la liste et met les indice dans une liste de game
+                    dans click une fonction qui est generer pour chaque carte qui push les indice des carte dans une liste de l'object
+                    la methode bond partage juste le pointer avec la fonction
                 </p>
             </section>
 
@@ -95,9 +92,8 @@ Comme on découvre les cartes, une par une, il faut se souvenir de la carte pré
                 </h3>
                 <p>
                     <code>
-                        carte reveler =[]
-                        if(carte_reveler == 2)
-                            carte_reveler[0] == carte[1]
+                        if clic sur carte:
+                            on verifie si la carte n,'est pas selectioner
 
                     </code>
                 </p>
@@ -109,15 +105,21 @@ Comme on découvre les cartes, une par une, il faut se souvenir de la carte pré
 Si les images des deux cartes ne sont pas identiques, on souhaite avoir le temps de voir la face de la seconde carte avant de les retourner face cachée. Pour cela, le plus simple est d'attendre 500 ms avant de retourner les cartes. Comment écrire cela en JavaScript ?
 Note : attention à ce que vous appelez this ! 
                 </h3>
-                <p>La balise <code>&lt;img&gt;</code> est une fenêtre ouverte sur l'imaginaire, ancrée par l'attribut <code>alt</code> pour ceux qui lisent avec le cœur (ou un lecteur d'écran).</p>
+                <p>
+                    j'utile la methode setTimeout de window pour declebncher une fonction j'ai modifier le delay pour que ce soit 1,5s parce que avec les carte qui 
+                    se retourne on aurait pas le temp de voir
+                </p>
             </section>
 
 
-                        <section class="question">
+                <section class="question">
                 <h3>
                     Enfin, modifiez shuffleCards pour que le tableau des cartes soit mélangé de façon aléatoire (comme dans la question 1 de l'exercice 3 du TP4). 
                 </h3>
-                <p>La balise <code>&lt;img&gt;</code> est une fenêtre ouverte sur l'imaginaire, ancrée par l'attribut <code>alt</code> pour ceux qui lisent avec le cœur (ou un lecteur d'écran).</p>
+                <p>
+                    ce que je fais je pioche un nombre random entre 0 et i qui la position dans la liste et j'echange
+
+                </p>
             </section>
         </div>
     </article>
