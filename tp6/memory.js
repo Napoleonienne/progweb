@@ -24,8 +24,7 @@ game.build = function(div) {
       div.appendChild(div_p);
       
 
-    for (let index_16 in  this.cards) {
-      let index_8=index_16;
+    for (const [index_16, index_8] of this.cards.entries()) {
       let ji = this.images[index_8];
       let div_img = document.createElement("div");
       div_img.classList.add("cardFlip-content");
@@ -58,11 +57,10 @@ game.build = function(div) {
           function click(){
             let indice = [index_16,index_8]
             let div_img1 = div_img;
+
+            if(this.carte_reveler.length < 2 && div_img1.id !="reveler" && !this.carte_reveler.includes(indice) ){
             div_img1.classList.add("is-flipped")
-
-            if(this.carte_reveler.length < 2 && div_img1.id !="reveler"){
             this.carte_reveler.push(indice);
-
             this.logic(div);
             
             }
@@ -103,9 +101,13 @@ game.build = function(div) {
 game.logic = function(div){
 
 
-
-        if (this.compteur == 0) {
-          
+          if (this.compteur == 0) {
+            
+           if (window.confirm("vous avez gagner veuillez recharger la page")){
+            location.reload();
+           }
+           else{
+           }
           
         }
  
@@ -136,16 +138,10 @@ game.logic = function(div){
               }}
               window.setTimeout(function(){this.carte_reveler = [];}.bind(this),1500)
 
-        if (this.compteur == 0) {
-            
-           if (window.confirm("vous avez gagner veuillez recharger la page")){
-            location.reload();
-           
-           };  
-          
+  
         }
 
-        }
+     
 
         
 
@@ -166,9 +162,12 @@ const shuffleCards = function(length) {
 
   for(let i=0;i<cards.length;i++){
     let j = random(i+1);
-    cards[i],cards[j] = cards[i],cards[j];
+    let temp =cards[i];
+    cards[i] =cards[j];
+    cards[j] = temp;
   }
   
+  console.log(cards)
   
 
   return cards;

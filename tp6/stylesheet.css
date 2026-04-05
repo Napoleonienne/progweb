@@ -6,24 +6,42 @@
     --text-main: #2c3e50;
     --bg-soft: #f9f9f9;
     --spacing: 2rem;
+  }
+
+.question{
+  border: #23a6d5 5px;
 }
 
+.exercise-card{
 
+    border: 10px;
+    border-color:blueviolet ;
+}
 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 body {
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.6;
 
-    background: linear-gradient(
-    to bottom right,
-    #fc00ff,
-    #00dbde
-  );
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
     margin: 0;
     padding: var(--spacing);
+    color: black;
 
 
-    border: 8px solid black;
     min-height: 1000px;
     display: flex;
     justify-content: center;
@@ -33,6 +51,7 @@ body {
     font-family: "Fascinate Inline", system-ui;
     font-style: normal;
 }
+
 
 
 
@@ -49,7 +68,9 @@ p.right{
   text-align: right;
 }
 h1{
-    font-size: 24pt;
+    font-size: 44pt;
+    color: gold;
+
     text-align: center;
     color: var(--accent-color);
 
@@ -113,9 +134,4 @@ h3{
  transform: rotateY(180deg);
 }
 
-.cardFlip-back-content {
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
