@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[TITRE]</title>
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+
+<header>
+    <div class="meta-info">
+        <span class="author">eliassaint guy</span>
+        <span class="date">Session de Février 2026</span>
+    </div>
+    <h1>Exploration du Web : Compte-rendu de TP</h1>
+</header>
+
+<main>
+    <article class="exercise-card">
+        <header class="exercise-header">
+            <h2>01.Exercice 1 : Un panier de fruits</h2>
+        </header>
+        
+        <div class="content">
+          
+             <section class="question">
+                <h3></h3>
+                <p></p>
+            </section>
+
+             <section class="question">
+                <h3>On cherche à écrire une requête AJAX qui va lire le fichier fruitQuantities.json.
+Créez un objet XMLHttpRequest, utilisez la méthode open() pour créer une requête sur le fichier fruitQuantities.json stocké sur le serveur Github (et non pas celui que vous avez copié localement), puis envoyez la requête au serveur avec la méthode send.
+Comment faire pour savoir si la requête a réussi ou échoué en utilisant les outils de développement de votre navigateur ?
+Testez si votre requête AJAX fonctionne avec Firefox et avec Chrome.</h3>
+                <p>
+                    j'ai fait
+                    ajax.open( "GET" ,lien github)
+
+                    puis j'ai regarderdans la console et y avait la requete dans la navigateur avec le code de reponse 
+
+
+                </p>
+            </section>
+
+             <section class="question">
+                <h3>
+Que se passe-t-il si vous essayez d'envoyer une requête pour récupérer une copie locale du fichier fruitQuantities.json ? 
+Si vous avez un message d'erreur, comment pouvez-vous expliquer le contenu de ce message d'erreur ?</h3>
+                <p>
+                    alors j'imagine la repone atttendue est qe il y a une erreur car il ne peut pas trouver le fichier dans le serveur 
+                    mais j'utilise une extention vscode  qui creer un serveur donc j'ai pas ce probleme
+                </p>
+            </section>
+
+             <section class="question">
+                <h3>En fonction de votre navigateur et de la version de celui-ci, il se peut que vous n'ayez pas pu accéder au fichier fruitQuantities.json. Pour éviter que ce genre de mésaventures ne se reproduise, vous allez lancer un serveur HTTP minimaliste sur votre propre machine. (Lisez bien toute la question, y compris le paragraphe qui commence par Attention, avant d'entamer les opérations qui suivent).
+Pour ce faire, ouvrez un terminal, placez-vous dans le répertoire tp8, puis lancez la commande python HTTPServer.py. Vous venez de lancer votre serveur HTTP dans le répertoire tp8, et alors le fichier fruitQuantities.json est accessible depuis l'URL http://localhost:8080/fruitQuantities.json. </h3>
+                <p>
+                    j'utilise pas 
+                </p>
+            </section>
+
+             <section class="question">
+                <h3>Ajoutez une fonction pour écouter les événements readystatechange et si la requête a réussi, affichez le résultat de la propriété responseText dans la console. </h3>
+                <p>
+                    et je l'ai mis dans lafonction readystatechange
+                    <code>  console.log("response : ",ajax.responseText);</code>
+                </p>
+            </section>
+
+             <section class="question">
+                <h3>Transformez la chaine de caractère stockée dans responseText au format JSON en objet JavaScript.
+Quel est le type de variable JavaScript obtenue ? </h3>
+                <p>
+                    j'utilise json.parse
+                    c'est de type <object data="" type=""></object>
+
+
+                </p>
+            </section>
+
+             <section class="question">
+                <h3>Affichez, dans la console, un tableau contenant les noms des champs stockés dans votre objet JSON.
+                        Note : Quelle fonction permet de créer un tel tableau ? </h3>
+                <p></p>
+            </section>
+
+            <section class="question">
+                <h3>
+                Actuellement, le document exo1.html contient une table HTML. À l'aide de JavaScript, récupérez l'élément HTML correspondant à cette table, 
+                puis modifiez la table pour faire en sorte qu'elle contienne une ligne par fruit et deux colonnes : 
+                la première colonne contiendra le nom du fruit, et l'autre la quantité du fruit.
+                Note : Vous devez modifier votre élément HTML uniquement à l'aide de votre code Javascript, 
+                et certainement pas en réécrivant à la main des portions du document exo1.html. 
+            </h3>
+                <p></p>
+            </section>
+
+            <section class="question">
+                <h3>On souhaite maintenant que le span quantity de la page HTML soit mis à jour avec la somme des quantités de tous les fruits. Comment faire ? </h3>
+                <p></p>
+            </section>
+
+
+
+
+        </div>
+    </article>
+
+
+
+    <article class="exercise-card">
+        <header class="exercise-header">
+            <h2>Exercice 2 : Combien ça coûte ?</h2>
+        </header>
+        
+        <div class="content">
+            <section class="question">
+                <h3></h3>
+                <p></p>
+            </section>
+
+             <section class="question">
+                <h3></h3>
+                <p></p>
+            </section>
+
+             <section class="question">
+                <h3></h3>
+                <p></p>
+            </section>
+
+             <section class="question">
+                <h3></h3>
+                <p></p>
+            </section>
+
+             <section class="question">
+                <h3></h3>
+                <p></p>
+            </section>
+
+             <section class="question">
+                <h3></h3>
+                <p></p>
+            </section>
+
+             <section class="question">
+                <h3></h3>
+                <p></p>
+            </section>
+
+           
+        </div>
+    </article>
+
+    </main>
+
+
+</body>
+</html>
